@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header {
+    position: relative;
+    height: 100vh;
+    background: url('puja-path-background.jpg') no-repeat center center/cover;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 51, 71, 0.8);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fefefe;
+    z-index: 1;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item a, .btn-signin {
+    text-decoration: none;
+    color: #093347;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: background 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-item a:hover, .btn-signin:hover {
+    background-color: transparent;
+    border-bottom: 2px solid #057FEC;
+}
+
+.btn-signin {
+    background-color: #057FEC;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-signin:hover {
+    background-color: #FE341B;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-family: 'Gentium Basic', serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #e05d2d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+    max-width: 600px;
+}
+
+main {
+    padding: 50px;
+    background-color: #f3f5ff;
+}
+
+.puja-path-info, .puja-path-benefits, .puja-path-practices {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #093347;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p, ul {
+    color: #002935;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.practice-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.practice-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.practice-card h3 {
+    color: #093347;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        position: relative;
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        transition: 0.3s;
+    }
+
+    .hamburger::before {
+        top: -8px;
+    }
+
+    .hamburger::after {
+        top: 8px;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100% - 60px);
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.3s;
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+    }
+
+    .header-content {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .puja-path-info,
+    .puja-path-benefits,
+    .puja-path-practices {
+        padding: 20px;
+    }
+
+    .practice-cards {
+        flex-direction: column;
+    }
+
+    .practice-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .btn-signin {
+      margin-top: 20px;
+    }
+  }
+  
+
+.footer {
+    background-color: #002935;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #057FEC;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #057FEC;
+}
