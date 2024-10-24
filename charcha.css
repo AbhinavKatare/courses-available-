@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header {
+    position: relative;
+    height: 60vh;
+    background: linear-gradient(rgba(9, 51, 71, 0.8), rgba(9, 51, 71, 0.8)), url('charcha1.avif');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fefefe;
+    z-index: 1;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item a, .btn-signin {
+    text-decoration: none;
+    color: #093347;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    transition: background 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-item a:hover, .btn-signin:hover {
+    background-color: transparent;
+    border-bottom: 2px solid #057FEC;
+}
+
+.btn-signin {
+    background-color: #057FEC;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-signin:hover {
+    background-color: #FE341B;
+}
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    max-width: 800px;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #FE341B;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.main-content {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-section {
+    margin-bottom: 60px;
+}
+
+.info-section h2 {
+    font-size: 2.5rem;
+    color: #093347;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.key-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.point-card {
+    background: #f3f5ff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.point-card h3 {
+    color: #057FEC;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.point-card p {
+    color: #555;
+    line-height: 1.6;
+}
+.footer {
+    background-color: #002935;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #057FEC;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #057FEC;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+      justify-content: space-between;
+      padding: 10px;
+    }
+  
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .hamburger {
+      width: 30px;
+      height: 3px;
+      background-color: #333;
+      position: relative;
+    }
+  
+    .hamburger::before,
+    .hamburger::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      transition: 0.3s;
+    }
+  
+    .hamburger::before {
+      top: -8px;
+    }
+  
+    .hamburger::after {
+      top: 8px;
+    }
+  
+    .nav-list {
+      position: fixed;
+      top: 60px;
+      left: -100%;
+      width: 100%;
+      height: calc(100% - 60px);
+      background-color: #fff;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.3s;
+    }
+  
+    .nav-list.active {
+      left: 0;
+    }
+  }
+  
+
+@media only screen and (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 0.9rem;
+    }
+
+    .info-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .point-card {
+        padding: 15px;
+    }
+}
+
